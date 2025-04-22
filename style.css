@@ -46,6 +46,12 @@ summary ~ h3{
     font-size: 1cm;
 }
 
+section h2{
+    text-decoration: underline solid;
+}
+
+
+
 form button{
     background-color: color-mix(in srgb, #bfcde0ff 50%, #5d5d81ff 10%);
 }
