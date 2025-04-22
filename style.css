@@ -16,6 +16,90 @@ header ~ h2{
     text-decoration: underline solid;
 }
 
+header{
+    position: relative;
+    text-align: center;
+    justify-content: center;
+}
+
+/* header h2, header li{
+    text-align: left;
+} */
+
+.grid{
+    position: relative;
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr; 
+    padding: 1%;
+    border-radius: 12px;
+    margin-top: 1%;
+    margin-left: auto;
+    margin-right: auto;
+}
+
+@media (max-width: 768px){
+    .grid{
+        grid-template-columns: 1fr;
+    }
+    
+}
+
+@media (max-width: 480px){
+    .grid{
+        grid-template-columns: 1fr;
+    }
+    
+}
+
+.grid li{
+    text-align: left;
+}
+
+.grid h2{
+    text-decoration: underline solid;
+}
+
+.attendance, .meeting_time{
+    text-align: center;
+    border: 10px solid white;
+    border-style: groove;
+    border-color: black;
+    border-width: 0.5rem;
+    border-radius: 1rem;
+    margin: 0.1rem 0.1em 0.1rem 0.1em;
+    /* 100px 100px 100px 100px */
+    /* 1rem 1em 1rem 1em */
+    padding: 1rem 1em 1rem 1em;
+    max-width: 4in;
+    max-height: 15cm;
+}
+
+nav{
+    text-align: center;
+    border: 10px solid white;
+    border-style: groove;
+    border-color: black;
+    border-width: 0.5rem;
+    border-radius: 1rem;
+    margin-top: 0.1rem;
+    margin-left: 0.1em;
+    margin-right: 0.1em;
+    margin-bottom: 0.1rem;
+    padding-top: 1rem;
+    padding-bottom: 1rem;
+    padding-left: 1em;
+    padding-right: 1em;
+    max-width: 4in;
+    max-height: 15cm;
+}
+
+
+nav ol{
+    width: fit-content;
+    margin: auto;
+    text-align: left;
+}
+
 nav > h2{
     text-decoration: underline solid;
 }
@@ -30,14 +114,6 @@ strong{
     color: black;
 }
 
-.meeting_info{
-    text-align: center;
-}
-
-.meeting_info h2, .meeting_info li{
-    text-align: left;
-}
-
 header h2{
     text-decoration: underline solid;
 }
@@ -50,10 +126,62 @@ section h2{
     text-decoration: underline solid;
 }
 
+img{
+    display: inline-block;
+    width: 1500px;
+    height: 7in;
+}
+
+@media (max-width: 768px){
+    img{
+        width: 1000px;
+        height: 7in;
+    }
+    
+}
+
+@media (max-width: 480px){
+    img{
+        width: 400px;
+        height: 15in;
+    }
+    
+}
 
 
-form button{
+.vid_aud{
+    border-top: 1px solid black;
+    border-bottom: 1px solid black;
+    margin-top: 100px;
+    margin-bottom: 100px;
+    padding-bottom: 20px;
+    display: flex;
+    flex-direction: column;
+    flex-wrap: nowrap;
+    flex-grow: 1;
+    align-items: center;
+}
+
+@media (max-width: 768px) {
+    .vid_aud{
+        font-size: 20px;
+    }
+}
+
+
+
+
+button{
     background-color: color-mix(in srgb, #bfcde0ff 50%, #5d5d81ff 10%);
+}
+
+button:hover{
+    cursor: pointer;
+    background-color: color-mix(in srgb, #bfcde0ff 50%, #5d5d81ff 50%);
+}
+
+button:active{
+    box-shadow: 3px 3px 4px rgb(51, 109, 153);
 }
 
 form fieldset legend{
@@ -64,6 +192,6 @@ footer{
     font-family: 'Courier New', Courier, monospace;
 }
 footer h3 + p{
-    font-size: 2rem;
+    font-size: 150%;
     color: rgb(11, 82, 14);
 }
