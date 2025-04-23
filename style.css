@@ -5,7 +5,9 @@
 --columbia-blue: #bfcde0ff;
 --white: #fefcfdff; 
 */
-
+*{
+    font-family: 'Times New Roman';
+}
 body{
     background-color: hsl(200, 74%, 83%);
     font-size: 20px;
@@ -26,7 +28,7 @@ header{
     text-align: left;
 } */
 
-.grid{
+[class = "grid"]{
     position: relative;
     display: grid;
     grid-template-columns: 1fr 1fr 1fr; 
@@ -51,6 +53,7 @@ header{
     
 }
 
+/* Grid and Box Summary */
 .grid li{
     text-align: left;
 }
@@ -91,19 +94,19 @@ nav{
     padding-right: 1em;
     max-width: 4in;
     max-height: 15cm;
+
+    & ol{
+        width: fit-content;
+        margin: auto;
+        text-align: left;
+    }
+
+    & > h2{
+        text-decoration: underline solid;
+    }
 }
 
-
-nav ol{
-    width: fit-content;
-    margin: auto;
-    text-align: left;
-}
-
-nav > h2{
-    text-decoration: underline solid;
-}
-
+/* Make the horizontal lines more visible */
 hr{
      border: none;
      height: 2px;
@@ -114,6 +117,7 @@ strong{
     color: black;
 }
 
+/* Summary and Details Styling */
 header h2{
     text-decoration: underline solid;
 }
@@ -122,10 +126,11 @@ summary ~ h3{
     font-size: 1cm;
 }
 
-section h2{
+section:has(+h2){
     text-decoration: underline solid;
 }
 
+/* Image Styling */
 img{
     display: inline-block;
     width: 1500px;
@@ -148,8 +153,8 @@ img{
     
 }
 
-
-.vid_aud{
+/* Video + Audio Styling */
+#vid_aud{
     border-top: 1px solid black;
     border-bottom: 1px solid black;
     margin-top: 100px;
@@ -163,14 +168,12 @@ img{
 }
 
 @media (max-width: 768px) {
-    .vid_aud{
+    #vid_aud{
         font-size: 20px;
     }
 }
 
-
-
-
+/* Form + Submit Button Styling */
 button{
     background-color: color-mix(in srgb, #bfcde0ff 50%, #5d5d81ff 10%);
 }
@@ -188,9 +191,13 @@ form fieldset legend{
     background-color: color(display-p3 1 2 100);
 }
 
+/* Footer Styling */
 footer{
+    position: absolute;
+    display: inline;
     font-family: 'Courier New', Courier, monospace;
 }
+
 footer h3 + p{
     font-size: 150%;
     color: rgb(11, 82, 14);
